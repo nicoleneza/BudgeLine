@@ -1,5 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
+import { path } from 'express/lib/application'
 
 export default function Navbar() {
   return (
@@ -8,25 +9,25 @@ export default function Navbar() {
             <span className='text-4xl'>BudgeLine</span>
         </div>
         <nav className=' flex flex-row gap-20 mx-10 text-[rgba(82, 101, 222, 1)] text-1xl font-inter  ml-26' >
-            <Link href='/'>
+            <Link href='/Home' className={path==='/Home' ? 'border-b-4' : ""}>
                 Home
             </Link>
-            <Link href='/'>
+            <Link href='/Services' className={path==='/Services' ? 'border-b-4' : ""} >
                 Services
             </Link>
-            <Link href='/about'>
+            <Link href='/About' className={path==='/About' ? 'border-b-4' : ""}>
                 How it works
             </Link>
-            <Link href='/about'>
+            <Link href='/Reviews' className={path === '/Reviews' ? 'border-b-4' : ""}>
                 Reviews
             </Link>
-            <Link href='/about'>
+            <Link href='/Dashboard' className = {path === '/Dashoboard' ? 'border-b-4' : ""}>
                 Dashboard
             </Link>
         </nav>
         <div className=' flex flex-row gap-12 '>
             <button className=' border-black-3 font-bold w-44 h-12 rounded-full border'>
-                <Link href='  '>
+                <Link href=''>
                     Log In
                 </Link>
             </button>
