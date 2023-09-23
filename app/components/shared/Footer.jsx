@@ -1,10 +1,13 @@
 import React from 'react'
 import Link from 'next/link'
+import { AiOutlineApple } from "react-icons/ai";
+import { BiLogoPlayStore } from "react-icons/bi";
+
 
 const Footer = () => {
   return (
     // <div className=''>
-        <footer className=' flex flex-row  px-40  py-28   gap-x-12 bg-black text-white h-96'>
+        <footer className=' flex flex-row  px-40  py-28   gap-x-12  text-bla h-96'>
             <div className='title'>
                 <span className='  mr-36 text-4xl'>
                     BudgeLine
@@ -50,6 +53,28 @@ const Footer = () => {
                     <Link href='/'>
                         Contact Us
                     </Link>
+                </div>
+
+                <div className='  gap-y-6'>
+                    <button className='bg-black  w-52 rounded-xl flex flex-row items-center gap-3  h-20 justify-center'> 
+                    <div>
+                    <AiOutlineApple  style={{ color: 'white', width:'40px', height:'30px'}}/>
+                    </div>
+                    <div className='flex flex-col font-bold'>
+                    <span className=' text-white '>Download on</span>
+                    <span className='text-white'>App store</span>
+                    </div>
+                    </button>
+
+                    <button className='bg-black  w-52 rounded-xl flex flex-row items-center gap-3  h-20 justify-center'> 
+                    <div>
+                    <BiLogoPlayStore  style={{ color: 'white', width:'40px', height:'30px'}}/>
+                    </div>
+                    <div className='flex flex-col font-bold'>
+                    <span className=' text-white '>Get it on</span>
+                    <span className='text-white'>Play store</span>
+                    </div>
+                    </button>
                 </div>
 
         </footer>
