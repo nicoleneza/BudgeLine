@@ -11,7 +11,26 @@ const Signup = () => {
     password : ""
   })
 
- 
+  const handleSignup = async (e) => {
+    try {
+        e.preventDefault()
+        setLoading(true)
+        const response = await api().post("/user/create", { ...signupData })
+        const { data } = response.data
+        localStorage.setItem("token", data.token)
+        localStorage.setItem("user", JSON.stringify(data.user))
+        setUser(data.user)
+        setAuthenticated(true)
+        setViewSignup(false)
+    }
+    catch (e) {
+        toast.error(e.response.data.message)
+        console.log(e)
+    }
+    finally {
+        setLoading(false)
+    }
+}
 
   const SubmitHandler = (e)=>{
     e.preventDefault()

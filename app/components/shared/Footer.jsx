@@ -2,12 +2,16 @@ import React from 'react'
 import Link from 'next/link'
 import { AiOutlineApple } from "react-icons/ai";
 import { BiLogoPlayStore } from "react-icons/bi";
+import { BsFacebook } from "react-icons/bs"
+import { FaTwitter} from "react-icons/fa"
+import { AiFillInstagram , AiFillLinkedin } from "react-icons/ai"
 
 
 const Footer = () => {
   return (
-    // <div className=''>
-        <footer className=' flex flex-row  px-40  py-28   gap-x-12  text-bla h-96'>
+    <div className='flex flex-col'>
+
+        <footer className=' flex flex-row  px-40   py-20 gap-x-12  h-96'>
             <div className='title'>
                 <span className='  mr-36 text-4xl'>
                     BudgeLine
@@ -55,29 +59,61 @@ const Footer = () => {
                     </Link>
                 </div>
 
-                <div className='  gap-y-6'>
+
+                <div className=' w-auto h-auto flex flex-col gap-y-10 justify-items-end     ml-36'>
                     <button className='bg-black  w-52 rounded-xl flex flex-row items-center gap-3  h-20 justify-center'> 
-                    <div>
                     <AiOutlineApple  style={{ color: 'white', width:'40px', height:'30px'}}/>
-                    </div>
-                    <div className='flex flex-col font-bold'>
+                    <span className='flex flex-col font-bold'>
                     <span className=' text-white '>Download on</span>
                     <span className='text-white'>App store</span>
-                    </div>
+                    </span>
                     </button>
 
                     <button className='bg-black  w-52 rounded-xl flex flex-row items-center gap-3  h-20 justify-center'> 
-                    <div>
                     <BiLogoPlayStore  style={{ color: 'white', width:'40px', height:'30px'}}/>
-                    </div>
-                    <div className='flex flex-col font-bold'>
+                    <span className='flex flex-col font-bold'>
                     <span className=' text-white '>Get it on</span>
                     <span className='text-white'>Play store</span>
-                    </div>
+                    </span>
                     </button>
-                </div>
+                    <div className="flex items-center gap-4">
+						<a
+							className="flex items-center px-2"
+							href="https://www.linkedin.com/in/ishimwe-ndungutse-charles-079418227/"
+							target="_blank" rel="noreferrer"
+						>
+							<BsFacebook  className="text-xl rounded-full border border-black" />
+						</a>
+						<a
+							className="flex items-center px-2"
+							href="https://github.com/NdungutseCharles103"
+							target="_blank"
+							rel="no-referrer noreferrer"
+						>
+							<FaTwitter className="text-xl" />
+						</a>
+						<a
+							className="flex items-center px-2"
+							href="https://www.facebook.com/ishimwendungutsecharles"
+							target="_blank"
+							rel="no-referrer noreferrer"
+						>
+							<AiFillInstagram className="text-xl" />
+						</a>
+						<a
+							className="flex items-center px-2"
+							href="https://www.instagram.com/ndungutse_charles/"
+							target="_blank"
+							rel="no-referrer noreferrer"
+						>
+							<AiFillLinkedin className="text-xl" />
+						</a>
+					</div>
 
+                </div>
         </footer>
+        <p className='  bg-slate-100 w-full h-12 flex items-center justify-center'>&copy;copyright@BUDGELINE 2023 All rights reserved</p>
+        </div>
     // </div>
   )
 }
