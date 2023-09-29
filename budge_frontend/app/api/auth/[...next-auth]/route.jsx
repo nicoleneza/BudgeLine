@@ -15,7 +15,7 @@ const handler = NextAuth({
             credentials: {
               email: { label: "email", type: "email", placeholder: "jsmith" },
               password: { label: "Password", type: "password" }
-            },
+            },                     
             async authorize(credentials) {
               // Add logic here to look up the user from the credentials supplied
              if(!credentials?.email||!credentials?.password){

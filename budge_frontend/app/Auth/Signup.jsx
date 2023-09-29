@@ -3,6 +3,7 @@ import { SiFacebook } from 'react-icons/si'
 import { BsApple } from 'react-icons/bs'
 import { FcGoogle } from 'react-icons/fc'
 import React, { useState } from 'react'
+import Image from 'next/image'
 
 const Signup = () => {
   // const [variant,setVariant] = useState('login')
@@ -32,13 +33,20 @@ const Signup = () => {
 
   return (
     <div className='  border-none border-2 w-3/5 h-auto flex flex-row  content-center'> 
-
     <div className={ `w-1/2 bg-blue-300 overflow-hidden `}>
-      <div className='flex flex-col text-3xl   p-10 text-blue-700 '>
+      <div className='flex flex-col text-3xl  items-center p-10 bg-slate-400  text-blue-700 '>
       <span className=' font-bold'>Make faster decisions</span>
       <span>More confident</span>
-      <span>Regarding your money</span>  
-      </div>    
+      <span>Regarding your money</span> 
+      </div>   
+      <div className=''>
+      <Image
+    src='/undraw_Online_payments_re_y8f2-removebg-preview.png'
+    alt='the signup image'
+    width={500}
+    height={50}
+    /> 
+        </div> 
       </div>
 
     <div className=' w-1/2 flex flex-col gap-y-5 py-16   px-24'> 
