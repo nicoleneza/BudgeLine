@@ -15,13 +15,6 @@ const Signup = () => {
     try {
         e.preventDefault()
         setLoading(true)
-        const response = await api().post("/user/create", { ...signupData })
-        const { data } = response.data
-        localStorage.setItem("token", data.token)
-        localStorage.setItem("user", JSON.stringify(data.user))
-        setUser(data.user)
-        setAuthenticated(true)
-        setViewSignup(false)
     }
     catch (e) {
         toast.error(e.response.data.message)
@@ -38,11 +31,11 @@ const Signup = () => {
 
 
   return (
-    <div className=' border-black border-2 w-3/5 h-auto flex flex-row '> 
+    <div className='  border-none border-2 w-3/5 h-auto flex flex-row  content-center'> 
 
     <div className={ `w-1/2 bg-blue-300 overflow-hidden `}>
-      <div className='flex flex-col'>
-      <span className=' text-blue-700 font-bold'>Make faster decisions</span>
+      <div className='flex flex-col text-3xl   p-10 text-blue-700 '>
+      <span className=' font-bold'>Make faster decisions</span>
       <span>More confident</span>
       <span>Regarding your money</span>  
       </div>    

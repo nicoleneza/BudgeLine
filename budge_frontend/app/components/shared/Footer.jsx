@@ -9,22 +9,20 @@ import { AiFillInstagram , AiFillLinkedin } from "react-icons/ai"
 
 const Footer = () => {
   return (
-    <div className='flex flex-col'>
+    <div className='flex flex-col fixed bottom-0 left-0 border-bottom-2 border w-full '>
 
-        <footer className=' flex flex-row  px-40   py-20 gap-x-12  h-96'>
+        <footer className=' flex flex-row  px-40   py-10 gap-x-12  h-72'>
             <div className='title'>
                 <span className='  mr-36 text-4xl'>
                     BudgeLine
                 </span>
                 </div> 
 
-                <div className=' flex flex-col text-2xl'>
+                <div className=' flex flex-col text-2lg'>
                     <span className=' font-bold mb-3'>
                         Explore
                     </span>
-                        <Link href='/about'>
-                            About
-                        </Link>
+                    <div className=' flex flex-col gap-y-4'>
                     <Link href='/Home' className='' >
                 Home
             </Link>
@@ -37,30 +35,41 @@ const Footer = () => {
             <Link href='/Reviews' className=''>
                 Reviews
             </Link>
+            </div>
                 </div>
 
-                <div className='flex flex-col text-2xl'>
-                    <span className='font-bold mb-3'>Get started</span>
+                <div className='flex flex-col text-2lg'>
+                    <span className='font-bold mb-3'>Get started</span>  
+                    <div className=' flex flex-col gap-y-4'>
                     <Link href='/'>
                         Sign up
                     </Link>
                     <Link href='/'>
                         Login In
                     </Link>
+                    <Link href=''>
+                        Online budgeting goals
+                    </Link>
+                    <Link href=''>
+                      How to make a budget 
+                    </Link>
+                    </div>
                 </div>
 
-                <div className='flex flex-col text-2xl'>
+                <div className='flex flex-col text-2lg'>
                     <span className='font-bold mb-3'>Get help</span>
+                    <div className=' flex flex-col gap-y-4'>
                     <Link href='/'>
                         How to videos
                     </Link>
                     <Link href='/'>
                         Contact Us
                     </Link>
+                    </div>
                 </div>
 
 
-                <div className=' w-auto h-auto flex flex-col gap-y-10 justify-items-end     ml-36'>
+                <div className=' w-auto h-auto flex flex-col gap-y-10 justify-items-end   ml-52'>
                     <button className='bg-black  w-52 rounded-xl flex flex-row items-center gap-3  h-20 justify-center'> 
                     <AiOutlineApple  style={{ color: 'white', width:'40px', height:'30px'}}/>
                     <span className='flex flex-col font-bold'>
