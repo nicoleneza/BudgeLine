@@ -41,7 +41,7 @@ const Footer = () => {
                 <div className='flex flex-col text-2lg'>
                     <span className='font-bold mb-3'>Get started</span>  
                     <div className=' flex flex-col gap-y-4'>
-                    <Link href='/'>
+                    <Link href='/Signup'>
                         Sign up
                     </Link>
                     <Link href='/'>
