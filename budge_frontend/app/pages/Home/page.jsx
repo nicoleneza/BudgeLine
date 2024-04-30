@@ -1,3 +1,4 @@
+'use client'
 import React from "react";
 import Image from "next/image";
 import { GoDownload } from "react-icons/go";
@@ -29,33 +30,33 @@ export default function Home() {
           <Image src={"/home.png"} alt="home image" width={500} height={500} />
         </div>
       </div>
-      <div>
-        <span>231</span>
-        <span>
-          <GoDownload />
-          Downloads
-        </span>
-      </div>
-      <div>
-        <span>231</span>
-        <span>
-          <AiOutlineStar />
-          Downloads
-        </span>
-      </div>
-      <div>
-        <span>231</span>
-        <span>
-          <TbWorld />
-          Languages
-        </span>
-      </div>
-      <div>
-        <span>231</span>
-        <span>
-          <BsBank />
-          bank connections
-        </span>
+      <div className='w-11/12 min-h-min rounded-lg bg-black mx-auto  flex flex-row text-lg gap-36 items-center justify-center'>
+        <div className=' flex flex-col '>
+          <span className='font-bold text-blue-500'>231K</span>
+          <span className=''>
+            <GoDownload /> Downloads
+          </span>
+        </div>
+        <div>
+          <span className='font-bold text-blue-500'>231</span>
+          <span>
+            <AiOutlineStar />
+            Downloads
+          </span>
+        </div>
+        <div>
+          <span className='font-bold text-blue-500'>231</span>
+          <span>
+            <TbWorld /> Languages
+          </span>
+        </div>
+        <div>
+          <span className='font-bold text-blue-500'>231</span>
+          <span>
+            <BsBank />
+            bank connections
+          </span>
+        </div>
       </div>
     </div>
   );
